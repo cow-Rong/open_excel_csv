@@ -1,6 +1,6 @@
-#-encoding:utf8--
-#author:william
-#email:william.sv@icloud.com
+#-encoding:utf8-
+#-author:william-
+#-email:william.sv@icloud.com-
 import os
 import sys
 import chardet
