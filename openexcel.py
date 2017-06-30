@@ -1,4 +1,4 @@
-#-#-encoding:utf8--
+#-encoding:utf8--
 #author:william
 #email:william.sv@icloud.com
 import os
