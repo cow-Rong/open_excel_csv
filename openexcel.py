@@ -1,16 +1,17 @@
+#-#-encoding:utf8--
+#author:william
+#email:william.sv@icloud.com
 import os
-import tqdm
-import time
 import sys
 import chardet
 
-class oel():
+class Oel():
 
     def __init__(self, path):
         self.path = path
 
-    def fileChar(self):
-        file = self.fileOrdir()
+    def file_char(self):
+        file = self.file_or_dir()
         if type(file) == str:
             with open(file, 'rb') as f:
                 encoding = chardet.detect(f.read())['encoding']
@@ -23,9 +24,7 @@ class oel():
             print('输入的不是一个文件')
             sys.exit(1)
 
-
-
-    def fileOrdir(self):
+    def file_or_dir(self):
         listdirs = []
         if os.path.isfile(self.path) or os.path.isdir(self.path):
             if os.path.isdir(self.path):
@@ -42,14 +41,14 @@ class oel():
 
     def results(self):
         list = []
-        file = self.fileOrdir()
+        file = self.file_or_dir()
         if type(file) == list:
             print('这是一个目录')
             sys.exit(1)
         elif type(file) == str:
             try:
                 with open(file, 'rb') as f:
-                    char = self.fileChar()
+                    char = self.file_char()
                     lines = f.readlines()
                     for line in lines:
                         line = line.decode(char)
